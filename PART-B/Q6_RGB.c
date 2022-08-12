@@ -1,8 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 #include "NUC1xx.h"
-#include "Driver/DrvGPIO.h"
-#include "Driver/DrvSYS.h"
-#include "Driver/DrvUART.h"
+#include "Driver\DrvGPIO.h"
+#include "Driver\DrvSYS.h"
+#include "Driver\DrvUART.h"
 
 void Init_led()
 {

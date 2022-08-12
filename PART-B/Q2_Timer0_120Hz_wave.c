@@ -2,18 +2,19 @@
 
 void wait()
 {
-	T0TCR=0x1;
-	while(T0TC!=T0MR0);
+	T0TCR=1;
+	while(T0TC!=T0MR1);
 }
+
+
 
 int main()
 {
-	IODIR0=0xFFFFFFFF;
-	T0MR0=0x1234;
-	T0MCR=0x4;
+	T0MR1=0xCB71;
+	T0MCR=0x30;
 	while(1)
 	{
-		
+		IODIR0=0x1;
 		IOSET0=0x1;
 		wait();
 		IOCLR0=0x1;
